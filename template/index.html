@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whisper Transcription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">  
+        <div class="row">
+            <div class="column left">
+                <h1>Whisper Transcription</h1>
+                <div class="button-container">
+                    <label for="audioFile" class="file-input-label">
+                        choose file
+                        <input type="file" name="audio_file" id="audioFile" accept="audio/*" hidden>
+                    </label>
+                    <span id="fileName"></span>
+                    <button type="button" id="transcribeButton" disabled>transcribe</button>
+                </div>
+                <div id="loading" style="display: none;">Transcribing... <span class="spinner"></span></div>
+                <textarea id="transcript" readonly></textarea>
+            </div>
+            <div class="column right">
+                <img src="{{ url_for('static', filename='images/typewrite_1.jpg') }}" alt="Whisper Image">
+            </div>
+        </div>    
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
