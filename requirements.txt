@@ -1,0 +1,4 @@
+Flask
+whisper
+Werkzeug  # Dependency of Flask, usually installed automatically
+Jinja2  # Dependency of Flask, usually installed automatically
